@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="17px" viewBox="0 0 20 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>949E81F7-94E0-43A8-BF0F-2A7EA90F1130</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desafio-Front" transform="translate(-44.000000, -116.000000)">
+            <g id="menu">
+                <g id="side-nav">
+                    <g id="list" transform="translate(20.000000, 104.000000)">
+                        <g id="dashboard">
+                            <g id="on">
+                                <g id="ic_home" transform="translate(22.000000, 8.000000)">
+                                    <polygon id="Bounds" points="0 0 24 0 24 24 0 24"></polygon>
+                                    <polygon id="Icon" fill="#00A685" points="10 21 10 15 14 15 14 21 19 21 19 13 22 13 12 4 2 13 5 13 5 21"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+@import 'bootstrap';
+@import 'settings';
+@import 'tools';
+@import 'base';
+
+header {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.22);
+    width: 100%;
+    height: 65px;
+
+    .user {
+        span {
+            @include fontRoboto(600);
+            color: #4A4A4A;
+            font-size: 14px;
+        }
+    }
+}

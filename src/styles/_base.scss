@@ -1,0 +1,26 @@
+// ***BASE***
+body {
+    background: $gray-200;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    &:focus {
+        outline: none;
+    }
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+figure {
+    margin: 0px;
+}

@@ -1,0 +1,31 @@
+@import 'bootstrap';
+@import 'settings';
+@import 'tools';
+@import 'base';
+@import 'trump';
+
+
+.footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    height: 80px;
+
+    span {       
+        @include fontRoboto();
+        color: #9B9B9B;
+        font-size: 14px;  
+    }
+
+    a {
+        margin-left: 27px;
+    
+        img {
+            transition: .2s all ease-in-out;
+        }
+
+        &:hover {
+            > img {
+                transform: scale(1.5);
+            }
+        }
+    }
+}

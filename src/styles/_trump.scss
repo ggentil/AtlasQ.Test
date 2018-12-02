@@ -1,0 +1,16 @@
+// ***TRUMP***
+
+.hidden {
+	display: none !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.row-no-padding {
+    [class*="col-"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}

@@ -1,0 +1,26 @@
+@import 'bootstrap';
+
+.content {
+    width: calc(100vw - 293px);
+    min-height: 100vh;
+    margin-left: 293px;
+    background-image: url('/assets/images/bg_content.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    transition: .3s all ease-in-out;
+
+    .pages {
+        min-height: calc(100vh - 65px - 80px);
+    }
+}
+
+@include media-breakpoint-down(md) {
+    side-bar {
+        display: none !important;
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0px;
+    }
+}
