@@ -1,0 +1,45 @@
+// ***FUNCTIONS***
+
+
+
+// ***MIXINS***
+
+// FONT OPEN SANS VARIAÇÕES
+/* Light - $fw: 300, $fs: normal
+ * Medium - $fw: 400, $fs: normal
+ * Regular - $fw: 500, $fs: normal
+ * Bold - $fw: 700, $fs: normal
+ * Black - $fw: 900, $fs: normal
+ */
+ @mixin fontRoboto($fw: 400, $fs: normal) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: $fw;
+    font-style: $fs;
+}
+
+@mixin border-radius($bd-radius) {
+    -webkit-border-radius: $bd-radius;
+    -moz-border-radius: $bd-radius;
+    -ms-border-radius: $bd-radius;
+    border-radius: $bd-radius;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content};
+    &:-moz-placeholder           {@content};
+    &::-moz-placeholder          {@content};
+    &:-ms-input-placeholder      {@content}; 
+}
+
+@mixin transformRotate($n) {
+    -ms-transform: rotate($n);
+    -webkit-transform: rotate($n);
+    transform: rotate($n);
+}
+
+@mixin box { 
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    padding: 24px;
+}

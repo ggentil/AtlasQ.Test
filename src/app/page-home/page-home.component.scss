@@ -1,0 +1,77 @@
+@import 'bootstrap';
+@import 'settings';
+@import 'tools';
+@import 'base';
+
+
+.head {
+    margin-top: 24px;
+}
+
+.box {
+    @include box();
+    margin-top: 24px;
+
+    .marginl {margin-left: 24px;}
+    .marginr {margin-right: 24px;}
+    .paddingl {padding-left: 24px;}
+    .paddingr {padding-right: 24px;}
+
+    h3 {
+        @include fontRoboto(500);
+        color: #3C3C3C;       
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .header {
+        @extend .d-flex;
+
+        span {
+            @extend .align-items-center;
+            @include fontRoboto(500);
+            color: rgba(0, 0, 0, 0.54);
+            font-size: 12px;
+            height: 45px;
+            width: 20%;
+
+            @include media-breakpoint-down(md) {
+                width: 33%;
+            }
+        }
+    }
+
+    .data {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+        margin-bottom: 39px;
+
+        li {
+            @extend .d-flex;
+            @extend .align-items-center;
+            height: 45px;
+            background-color: #F8F8F8;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+            &:last-child {
+                border: none;
+            }
+
+            span {
+                @include fontRoboto(400);
+                color: rgba(0, 0, 0, 0.87);
+                font-size: 13px;
+                width: 20%;
+
+                @include media-breakpoint-down(md) {
+                    width: 33%;
+                }
+            }
+        }
+    }
+
+    .hideOnMobile {
+        @include media-breakpoint-down(md) {
+            display: none !important;
+        }
+    }
+}

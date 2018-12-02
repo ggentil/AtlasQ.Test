@@ -1,0 +1,67 @@
+<section class="container">
+    <div class="row head">
+        <div class="col-md-6 col-12 d-flex flex-column mb-3 mb-md-0">
+            <page-titles
+                [title]="'Lucros'"
+                [subtitle]="'Relatório de distribuição de lucro'"
+            ></page-titles>
+        </div>
+        <div class="col-md-6 col-12 d-flex justify-content-end align-items-end">
+            <search-bar [termoEmPesquisa]="termoFiltro" (novaPesquisa)="receberNovoTermoBusca()"></search-bar>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="box">
+                <h3>Distribuição de lucro (último mês)</h3>
+
+                <div class="header">
+                    <span class="d-flex paddingl">Data</span>
+                    <span class="d-flex justify-content-center hideOnMobile">Moeda</span>
+                    <span class="d-flex justify-content-center hideOnMobile">Rendimento</span>
+                    <span class="d-flex justify-content-center">%</span>
+                    <span class="d-flex paddingr">Saldo</span>
+                </div>
+
+                <ul class="data">
+                    <li>
+                        <span class="paddingl">08/06/14 16:14</span>
+                        <span class="text-center hideOnMobile">BTC</span>
+                        <span class="text-center hideOnMobile">+0.0000010 BTC</span>
+                        <span class="text-center">0.05%</span>
+                        <span class="paddingr">0.25000000 BTC</span>
+                    </li>
+                    <li>
+                        <span class="paddingl">08/06/14 16:14</span>
+                        <span class="text-center hideOnMobile">BTC</span>
+                        <span class="text-center hideOnMobile">+0.0000010 BTC</span>
+                        <span class="text-center">0.05%</span>
+                        <span class="paddingr">0.25000000 BTC</span>
+                    </li>
+                    <li>
+                        <span class="paddingl">08/06/14 16:14</span>
+                        <span class="text-center hideOnMobile">BTC</span>
+                        <span class="text-center hideOnMobile">+0.0000010 BTC</span>
+                        <span class="text-center">0.05%</span>
+                        <span class="paddingr">0.25000000 BTC</span>
+                    </li>
+                    <li>
+                        <span class="paddingl">08/06/14 16:14</span>
+                        <span class="text-center hideOnMobile">BTC</span>
+                        <span class="text-center hideOnMobile">+0.0000010 BTC</span>
+                        <span class="text-center">0.05%</span>
+                        <span class="paddingr">0.25000000 BTC</span>
+                    </li>
+                    <li>
+                        <span class="paddingl">08/06/14 16:14</span>
+                        <span class="text-center hideOnMobile">BTC</span>
+                        <span class="text-center hideOnMobile">+0.0000010 BTC</span>
+                        <span class="text-center">0.05%</span>
+                        <span class="paddingr">0.25000000 BTC</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

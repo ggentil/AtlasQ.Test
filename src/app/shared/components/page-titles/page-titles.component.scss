@@ -1,0 +1,16 @@
+@import 'bootstrap';
+@import 'settings';
+@import 'tools';
+@import 'base';
+   
+h1 {
+    @include fontRoboto(700);
+    color: #3C3C3C;       
+    font-size: 36px;
+}
+
+span {
+    @include fontRoboto(400);
+    color: #3C3C3C;        
+    font-size: 14px;
+}
