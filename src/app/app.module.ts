@@ -3,9 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
-// OTHER IMPORTS
-import { NgxMaskModule } from 'ngx-mask';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DatePipe } from '@angular/common';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -38,11 +37,12 @@ import { SearchBarComponent } from './shared/components/search-bar/search-bar.co
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    NgxMaskModule.forRoot()
+    BrowserAnimationsModule
   ],
   providers: [
       RequestService,
-      UtilService
+      UtilService,
+      DatePipe
     ],
     bootstrap: [
       AppComponent

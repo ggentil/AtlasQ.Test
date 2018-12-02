@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('aec-ct-gerdau App', () => {
+describe('atlasq test App', () => {
   let page: AppPage;
 
   beforeEach(() => {

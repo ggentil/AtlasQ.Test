@@ -9,6 +9,7 @@ export class SearchBarComponent {
 
     @Output('novaPesquisa') novaPesquisa = new EventEmitter();
     @Input('termoEmPesquisa') termoEmPesquisa: string;
+    @Input('desabilitarValidacao') desabilitarValidacao: boolean = false;
 
     constructor() { }
 

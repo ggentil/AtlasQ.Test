@@ -7,13 +7,18 @@
             ></page-titles>
         </div>
         <div class="col-md-6 col-12 d-flex justify-content-end align-items-end">
-            <search-bar [termoEmPesquisa]="termoFiltro" (novaPesquisa)="receberNovoTermoBusca()"></search-bar>
+            <search-bar [desabilitarValidacao]="true" [termoEmPesquisa]="termoFiltro" (novaPesquisa)="receberNovoTermoBusca($event)"></search-bar>
         </div>
     </div>
 
     <div class="row mb-5">
-        <div class="col-12">
-            <div class="box">
+        <div class="col-12" [@opacity]="loader" [hidden]="!loader">
+            <div class="box d-flex justify-content-center align-items-center">
+                <img src="assets/images/loader.svg" alt="Carregando">
+            </div>
+        </div>
+        <div class="col-12" [@opacity]="!loader" [hidden]="loader">
+            <div class="box" *ngIf="arrLucros && arrLucros.length > 0">
                 <h3>Distribuição de lucro (último mês)</h3>
 
                 <div class="header">
@@ -25,43 +30,19 @@
                 </div>
 
                 <ul class="data">
-                    <li>
-                        <span class="paddingl">08/06/14 16:14</span>
-                        <span class="text-center hideOnMobile">BTC</span>
-                        <span class="text-center hideOnMobile">+0.0000010 BTC</span>
-                        <span class="text-center">0.05%</span>
-                        <span class="paddingr">0.25000000 BTC</span>
-                    </li>
-                    <li>
-                        <span class="paddingl">08/06/14 16:14</span>
-                        <span class="text-center hideOnMobile">BTC</span>
-                        <span class="text-center hideOnMobile">+0.0000010 BTC</span>
-                        <span class="text-center">0.05%</span>
-                        <span class="paddingr">0.25000000 BTC</span>
-                    </li>
-                    <li>
-                        <span class="paddingl">08/06/14 16:14</span>
-                        <span class="text-center hideOnMobile">BTC</span>
-                        <span class="text-center hideOnMobile">+0.0000010 BTC</span>
-                        <span class="text-center">0.05%</span>
-                        <span class="paddingr">0.25000000 BTC</span>
-                    </li>
-                    <li>
-                        <span class="paddingl">08/06/14 16:14</span>
-                        <span class="text-center hideOnMobile">BTC</span>
-                        <span class="text-center hideOnMobile">+0.0000010 BTC</span>
-                        <span class="text-center">0.05%</span>
-                        <span class="paddingr">0.25000000 BTC</span>
-                    </li>
-                    <li>
-                        <span class="paddingl">08/06/14 16:14</span>
-                        <span class="text-center hideOnMobile">BTC</span>
-                        <span class="text-center hideOnMobile">+0.0000010 BTC</span>
-                        <span class="text-center">0.05%</span>
-                        <span class="paddingr">0.25000000 BTC</span>
+                    <li *ngFor="let lucro of arrLucros">
+                        <span class="paddingl">{{ lucro.dateMoviment | date:'dd/MM/yy HH:mm' }}</span>
+                        <span class="text-center hideOnMobile">{{ lucro.coin }}</span>
+                        <span class="text-center hideOnMobile">+{{ lucro.proft | number: '1.0-5' }} {{ lucro.coin }}</span>
+                        <span class="text-center">{{ lucro.profitPercentage }}%</span>
+                        <span class="paddingr">+{{ lucro.balance | number: '1.0-5' }} {{ lucro.coin }}</span>
                     </li>
                 </ul>
             </div>
+            <div class="box" *ngIf="arrLucros && arrLucros.length == 0">
+                <h3>Não temos esses dados no momento</h3>
+            </div>
         </div>
     </div>
+
 </section>

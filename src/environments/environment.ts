@@ -5,8 +5,5 @@
 
 export const environment = {
     production: false,
-    BASE_API_URL: "https://dev.aecweb.com.br/api/",
-    BASE_URL_AEC: "https://dev.aecweb.com.br/",
-    BASE_IMG_URL: "https://dev.aecweb.com.br/matoutros/img_figuras/",
-    ORIGIN_ID: 3
+    BASE_API_URL: ""
 };
